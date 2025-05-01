@@ -1,2 +1,59 @@
-# LinkedIn-Agents-Challenge
-Building 31 AI agents in 31 days — practical use cases, daily builds, and open-source code for real-world automation with LLMs.
+# 🤖 30 AI Agents in 30 Days
+
+Welcome to my public challenge: building and releasing **one AI agent per day** for 30 days.  
+Each agent solves a concrete problem using **LLMs + tools** — from email automation to smart task orchestration.
+
+## 🌟 What You'll Find Here
+
+- 🛠️ Daily agent builds with clean, open-source code  
+- 📚 Technical explanations and architecture breakdowns  
+- 💬 Real-world use cases explained for both non-tech and dev audiences  
+- 🧪 Lessons learned along the way  
+
+## 🚀 Why I'm Doing This
+
+AI agents are more than just chatbots — they can **act** autonomously, combine tools, remember context, and evolve with feedback.  
+This repo explores what it really means to turn language models into intelligent assistants that do real work.
+
+## 📅 Daily Agents
+
+I'll update this list every day:
+
+| Day | Agent | Description |
+|-----|-------|-------------|
+| 1   | Calculator Agent | Chat GPT now knows how to make calculations without hallucinations! |
+| 2   | ...   | ...         |
+
+
+
+
+## Installation
+
+Before running the project, install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Running the Interface
+
+To launch the interface, use the following command:
+
+```bash
+streamlit run interface.py
+```
+
+## Configuration
+
+You can provide necessary environment variables at runtime or store them in a `.env` file to avoid entering them manually each time. I will make environment variables modifications possible on the interface really soon.
+
+## Licence
+
+This is a personnal project, feel free to give me feedback and suggestions !
+
+This project is licensed for personal use. Please include a reference to this repository in your work if you use any part of this project.
+
+## 🗺️ License
+
+MIT — use, remix, and build on it freely.
+
