@@ -5,6 +5,12 @@
             "description": "An agent that can perform basic mathematical operations like add, subtract, multiply, and divide two numbers.",
             "module_path": "CrewAgents.calculations_agent",
             "class_name": "CalculationAgent"
+        },
+        {
+            "name": "Web Browser Agent",
+            "description": "An agent capable of browsing the web and extracting information",
+            "module_path": "CrewAi.tavily_search_agent",
+            "class_name": "TavilySearchAgent"
         }
     ]
 } 

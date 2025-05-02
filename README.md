@@ -12,7 +12,7 @@ Each agent solves a concrete problem using **LLMs + tools** — from email autom
 
 ## 🚀 Why I'm Doing This
 
-AI agents are more than just chatbots — they can **act** autonomously, combine tools, remember context, and evolve with feedback.  
+AI agents are more than just chatbots, they can **act** autonomously, combine tools, remember context, and evolve with feedback.  
 This repo explores what it really means to turn language models into intelligent assistants that do real work.
 
 ## 📅 Daily Agents
@@ -47,13 +47,11 @@ streamlit run interface.py
 
 You can provide necessary environment variables at runtime or store them in a `.env` file to avoid entering them manually each time. I will make environment variables modifications possible on the interface really soon.
 
-## Licence
-
-This is a personnal project, feel free to give me feedback and suggestions !
-
-This project is licensed for personal use. Please include a reference to this repository in your work if you use any part of this project.
 
 ## 🗺️ License
 
 MIT — use, remix, and build on it freely.
 
+This is a personnal project, feel free to give me feedback and suggestions !
+
+This project is licensed for personal use. Please include a reference to this repository in your work if you use any part of this project.
