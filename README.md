@@ -22,7 +22,7 @@ I'll update this list every day:
 | Day | Agent | Description |
 |-----|-------|-------------|
 | 1   | Calculator Agent | Chat GPT now knows how to make calculations without hallucinations! |
-| 2   | ...   | ...         |
+| 2   | Web Search Agent   | Browses the web to find relevant information    |
 
 
 
