@@ -4,20 +4,22 @@
             "name": "Calculation Agent",
             "description": "An agent that can perform basic mathematical operations like add, subtract, multiply, and divide two numbers.",
             "module_path": "CrewAgents.calculations_agent",
-            "class_name": "CalculationAgent"
+            "class_name": "CalculationAgent",
+            "requires": "GeminiAPIKey"
         },
         {
             "name": "Web Browser Agent",
             "description": "An agent capable of browsing the web and extracting information",
             "module_path": "CrewAgents.tavily_search_agent",
             "class_name": "TavilySearchAgent",
-            "requires": "TavilyAPIKey"
+            "requires": ["TavilyAPIKey", "GeminiAPIKey"]
         },
         {
             "name": "Web Page Fetcher",
             "description": "An agent capable of querying a specific webpage to read its content",
             "module_path": "CrewAgents.webpage_agent",
-            "class_name": "WebPageAgent"
+            "class_name": "WebPageAgent",
+            "requires": "GeminiAPIKey"
         }
     ]
 } 

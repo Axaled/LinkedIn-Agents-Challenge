@@ -37,7 +37,7 @@ with st.sidebar:
                                   help="Enter your Gemini API key")
         
         # Tavily API Key
-        tavily_key = st.text_input("Tavily API Key (Optional)", 
+        tavily_key = st.text_input("Tavily API Key", 
                                    type="password", 
                                    value=st.session_state.api_keys.get("TavilyAPIKey", ""),
                                    help="Enter your Tavily API key")
@@ -74,19 +74,39 @@ with st.sidebar:
         if selected_agent_info:
             st.info(selected_agent_info["description"])
             
-            # Check if agent requires an API key
-            required_api = selected_agent_info.get("requires")
-            if required_api:
-                api_key_provided = st.session_state.api_keys.get(required_api, "")
-                if not api_key_provided:
-                    st.warning(f"This agent requires a {required_api}. Please provide it in the API Keys section.")
+            # Check if agent requires API keys
+            required_apis = selected_agent_info.get("requires", [])
+            # Convert single string to list for consistency
+            if isinstance(required_apis, str):
+                required_apis = [required_apis]
+                
+            if required_apis:
+                missing_keys = []
+                for required_api in required_apis:
+                    api_key_provided = st.session_state.api_keys.get(required_api, "")
+                    if not api_key_provided:
+                        missing_keys.append(required_api)
+                
+                if missing_keys:
+                    missing_keys_str = ", ".join(missing_keys)
+                    st.warning(f"This agent requires the following API keys: {missing_keys_str}. Please provide them in the API Keys section.")
         
         if st.button("Confirm selection"):
             if selected_agent_info:
-                # Check if required API key is provided
-                required_api = selected_agent_info.get("requires")
-                if required_api and not st.session_state.api_keys.get(required_api):
-                    st.error(f"Cannot load agent: {required_api} is required.")
+                # Check if all required API keys are provided
+                required_apis = selected_agent_info.get("requires", [])
+                # Convert single string to list for consistency
+                if isinstance(required_apis, str):
+                    required_apis = [required_apis]
+                
+                missing_keys = []
+                for required_api in required_apis:
+                    if not st.session_state.api_keys.get(required_api):
+                        missing_keys.append(required_api)
+                
+                if missing_keys:
+                    missing_keys_str = ", ".join(missing_keys)
+                    st.error(f"Cannot load agent: {missing_keys_str} API key(s) required.")
                 else:
                     try:
                         module = importlib.import_module(selected_agent_info["module_path"])
