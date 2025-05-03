@@ -1,3 +1,5 @@
+import sqlite_patch
+
 from crewai import Agent, Task, Crew
 from dotenv import load_dotenv
 from crewai.tools import tool

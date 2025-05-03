@@ -1,3 +1,5 @@
+import sqlite_patch
+
 from typing import Callable, List
 from crewai.tools import tool
 from CrewAgents.crew_agent import CrewAIAgent

@@ -1,3 +1,5 @@
+import sqlite_patch
+
 import os
 import json
 
