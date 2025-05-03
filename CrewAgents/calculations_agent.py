@@ -1,3 +1,5 @@
+# Day 1 of the challenge, this is a simple calculator agent
+
 import sqlite_patch
 
 from typing import Callable, List

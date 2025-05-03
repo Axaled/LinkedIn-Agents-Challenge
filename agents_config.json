@@ -9,8 +9,15 @@
         {
             "name": "Web Browser Agent",
             "description": "An agent capable of browsing the web and extracting information",
-            "module_path": "CrewAi.tavily_search_agent",
-            "class_name": "TavilySearchAgent"
+            "module_path": "CrewAgents.tavily_search_agent",
+            "class_name": "TavilySearchAgent",
+            "requires": "TavilyAPIKey"
+        },
+        {
+            "name": "Web Page Fetcher",
+            "description": "An agent capable of querying a specific webpage to read its content",
+            "module_path": "CrewAgents.webpage_agent",
+            "class_name": "WebPageAgent"
         }
     ]
 } 
