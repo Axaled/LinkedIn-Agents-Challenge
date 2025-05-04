@@ -1,6 +1,6 @@
 # Day 3 of the challenge, this agent can read any webpage 
 
-import sqlite_patch
+import core.sqlite_patch as sqlite_patch
 import requests
 
 from typing import List

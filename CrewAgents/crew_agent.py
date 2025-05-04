@@ -1,8 +1,10 @@
-import sqlite_patch
+import core.sqlite_patch as sqlite_patch
 
 from crewai import Agent, Task, Crew
 from dotenv import load_dotenv
 from crewai.tools import tool
+from litellm import AuthenticationError, BadRequestError
+import json
 
 
 from typing import List
@@ -87,10 +89,22 @@ class CrewAIAgent:
             return response
         
         except Exception as e:
-            print(f"Error in chat {e}")
-            if '"code": 503' in str(e) :
-                return "Sorry, servers are a little busy, you might want to try again in a few minutes (or more...)"
-            return "Sorry, I encountered an unexpected error processing your request, please try again"
+            return self.handle_chat_exception(e)
+
+    def handle_chat_exception(self, e: Exception) -> str:
+        """
+        Map low‑level LLM exceptions into friendly strings.
+        """
+        print("eroooooooooooooooooooooooooooooooooooooooooooooooooooor")
+        msg = str(e)
+
+        if isinstance(e, AuthenticationError) or "API key not valid" in msg:
+            return "❌ Authentication failed: your API key is invalid. Please check it in the sidebar."
+        if isinstance(e, BadRequestError) or "API key expired" in msg:
+            return "❌ Your API key has expired. Please renew it in the sidebar."
+        if '"code": 503' in msg:
+            return "Sorry, servers are a little busy, you might want to try again in a few minutes (or more...)"
+        return f"⚠️ An unexpected error occurred: {msg}"
         
     def clear_chat(self)-> bool:
         """

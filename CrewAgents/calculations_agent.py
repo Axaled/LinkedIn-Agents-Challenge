@@ -1,6 +1,6 @@
 # Day 1 of the challenge, this is a simple calculator agent
 
-import sqlite_patch
+import core.sqlite_patch as sqlite_patch
 
 from typing import Callable, List
 from crewai.tools import tool

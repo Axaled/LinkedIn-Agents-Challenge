@@ -1,6 +1,6 @@
 # Day 2 of the challenge, this is an agent that browses the web to find the best 
 # potential website to give an answer to a question
-import sqlite_patch
+import core.sqlite_patch as sqlite_patch
 
 import os
 import json
