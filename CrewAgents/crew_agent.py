@@ -95,7 +95,6 @@ class CrewAIAgent:
         """
         Map low‑level LLM exceptions into friendly strings.
         """
-        print("eroooooooooooooooooooooooooooooooooooooooooooooooooooor")
         msg = str(e)
 
         if isinstance(e, AuthenticationError) or "API key not valid" in msg:
