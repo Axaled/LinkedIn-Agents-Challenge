@@ -4,7 +4,6 @@ from crewai import Agent, Task, Crew
 from dotenv import load_dotenv
 from crewai.tools import tool
 from litellm import AuthenticationError, BadRequestError
-import json
 
 
 from typing import List
@@ -48,8 +47,6 @@ class CrewAIAgent:
         )
 
 
-
-    
     def _create_tools(self) -> List:
         """
         Create tools for the crew AI agent
@@ -79,7 +76,14 @@ class CrewAIAgent:
     
     def chat(self, message: str) -> str:
         """
-        Send a message and get a response with chat history.
+        Send a message with optional document support.
+
+        Parameters:
+        - message (str): The user's message.
+        - doc (list[str], optional): List of documents paths.
+
+        Returns:
+        - str: Agent's response.
         """
         try :
             response = self.crew.kickoff(inputs={"query":message, "history":self.messages})
@@ -90,6 +94,7 @@ class CrewAIAgent:
         
         except Exception as e:
             return self.handle_chat_exception(e)
+
 
     def handle_chat_exception(self, e: Exception) -> str:
         """
@@ -124,3 +129,4 @@ class CrewAIAgent:
         except Exception as e:
             print(f"Error clearing chat: {e}")
             return False
+        

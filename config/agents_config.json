@@ -1,25 +1,37 @@
 {
     "agents": [
-        {
-            "name": "Calculation Agent",
-            "description": "An agent that can perform basic mathematical operations like add, subtract, multiply, and divide two numbers.",
-            "module_path": "CrewAgents.calculations_agent",
-            "class_name": "CalculationAgent",
-            "requires": "GeminiAPIKey"
-        },
-        {
-            "name": "Web Browser Agent",
-            "description": "An agent capable of browsing the web and extracting information",
-            "module_path": "CrewAgents.tavily_search_agent",
-            "class_name": "TavilySearchAgent",
-            "requires": ["TavilyAPIKey", "GeminiAPIKey"]
-        },
-        {
-            "name": "Web Page Fetcher",
-            "description": "An agent capable of querying a specific webpage to read its content",
-            "module_path": "CrewAgents.webpage_agent",
-            "class_name": "WebPageAgent",
-            "requires": "GeminiAPIKey"
-        }
+      {
+        "name": "Calculation Agent",
+        "description": "Agent #1: can perform basic mathematical operations like add, subtract, multiply, and divide two numbers.",
+        "module_path": "CrewAgents.d1_calculations_agent",
+        "class_name": "CalculationAgent",
+        "requires": "GeminiAPIKey",
+        "accepts_file_input": false
+      },
+      {
+        "name": "Web Browser Agent",
+        "description": "Agent #2: capable of browsing the web and extracting information",
+        "module_path": "CrewAgents.d2_tavily_search_agent",
+        "class_name": "TavilySearchAgent",
+        "requires": ["TavilyAPIKey", "GeminiAPIKey"],
+        "accepts_file_input": false
+      },
+      {
+        "name": "Web Page Fetcher",
+        "description": "Agent #3: capable of querying a specific webpage to read its content",
+        "module_path": "CrewAgents.d3_webpage_agent",
+        "class_name": "WebPageAgent",
+        "requires": "GeminiAPIKey",
+        "accepts_file_input": false
+      },
+      {
+        "name": "File Analyser",
+        "description": "Agent #4: capable of understanding complex documents",
+        "module_path": "CrewAgents.d4_file_agent",
+        "class_name": "DocumentAnalysisAgent",
+        "requires": "GeminiAPIKey",
+        "accepts_file_input": true
+      }
     ]
-} 
+  }
+  

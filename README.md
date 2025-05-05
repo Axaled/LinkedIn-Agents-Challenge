@@ -23,8 +23,8 @@ I'll update this list every day:
 |-----|-------|-------------|
 | 1   | Calculator Agent | Chat GPT now knows how to make calculations without hallucinations! |
 | 2   | Web Search Agent   | Browses the web to find relevant information    |
-
-
+| 3   | Web Page Fetcher   | Reads the content of any url to answer questions   |
+| 4   | File Analyser   | Is able to read files it receives as input  |
 
 
 ## Installation
