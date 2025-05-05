@@ -25,10 +25,18 @@
         "accepts_file_input": false
       },
       {
-        "name": "File Analyser",
-        "description": "Agent #4: capable of understanding complex documents",
+        "name": "File Analyser Agent",
+        "description": "Agent #4: capable of understanding complex documents,⚠️⚠️ Is very slow on the online version, is better to use locally",
         "module_path": "CrewAgents.d4_file_agent",
         "class_name": "DocumentAnalysisAgent",
+        "requires": "GeminiAPIKey",
+        "accepts_file_input": true
+      },
+      {
+        "name": "Google Documents Agent",
+        "description": "Agent #5: Will save the conversation to a new doc on Google Docs,⚠️⚠️  Due to complex credentials management it is currently unasable on the streamlit version and will be replaced by day 1 Calculations Agent",
+        "module_path": "CrewAgents.d1_calculations_agent",
+        "class_name": "GoogleDocsAgent",
         "requires": "GeminiAPIKey",
         "accepts_file_input": true
       }
