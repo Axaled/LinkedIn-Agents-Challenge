@@ -15,7 +15,7 @@ def load_agents_config(path: str = "config/agents_config.json") -> Dict:
         Dict: Dictionary containing the agents configuration.
     """
     try:
-        with open(path, "r") as f:
+        with open(path, "r", encoding="utf-8") as f:
             return json.load(f)
     except FileNotFoundError:
         print(f"[ERROR] Configuration file not found at: {path}")

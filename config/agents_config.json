@@ -38,7 +38,15 @@
         "module_path": "CrewAgents.d1_calculations_agent",
         "class_name": "GoogleDocsAgent",
         "requires": "GeminiAPIKey",
-        "accepts_file_input": true
+        "accepts_file_input": false
+      },
+      {
+        "name": "Git Repository Analysis Agent",
+        "description": "Agent #6: Analyzes the history, structure, and content of a public Git repository.",
+        "module_path": "CrewAgents.d6_git_analyser_agent",
+        "class_name": "GitRepoAnalysisAgent",
+        "requires": "GeminiAPIKey",
+        "accepts_file_input": false
       }
     ]
   }
