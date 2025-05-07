@@ -47,6 +47,14 @@
         "class_name": "GitRepoAnalysisAgent",
         "requires": "GeminiAPIKey",
         "accepts_file_input": false
+      },
+      {
+        "name": "Pool Quotation Agent",
+        "description": "Agent #7: Introducing Scripted Agents logic, you can now force the agents into predefined steps to retrieve values, \n this is an arbitrary POC with fictional pool quotation",
+        "module_path": "CrewAgents.d7_pool_quotation_agent",
+        "class_name": "PoolQuotationAgent",
+        "requires": "GeminiAPIKey",
+        "accepts_file_input": false
       }
     ]
   }

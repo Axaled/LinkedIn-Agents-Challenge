@@ -10,7 +10,7 @@ from typing import List
 
 #This class is an abstraction of the CrewAi agents framework 
 class CrewAIAgent:
-    def __init__(self, model = "gemini/gemini-1.5-pro"):
+    def __init__(self, model = "gemini/gemini-2.0-flash-lite"):
 
         # Dummy Instructions
         self.role = "Ai assistant that provides relevant information from the web"
