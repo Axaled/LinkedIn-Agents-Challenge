@@ -57,7 +57,9 @@ class ScriptedAgent(CrewAIAgent, ABC):
     @property
     def instructions(self) -> str:
         return (
-            "You are a scripted assistant. On each turn:\n"
+            "You are a scripted assistant.\n" 
+            "On the first chat with the user always call next_step() to learn the first instructions"
+            "On each turn:\n"
             "1. Call next_step() to retrieve and pose the next question (beginning with the first step).\n"
             "2. After you understand the user's answer, call assign_value(value), then next_step().\n"
             "3. Do not generate any free‐form text while steps remain—only invoke these tools. "

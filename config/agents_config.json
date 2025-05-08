@@ -3,7 +3,7 @@
       {
         "name": "Calculation Agent",
         "description": "Agent #1: can perform basic mathematical operations like add, subtract, multiply, and divide two numbers.",
-        "module_path": "CrewAgents.d1_calculations_agent",
+        "module_path": "agents.CrewAgents.d1_calculations_agent",
         "class_name": "CalculationAgent",
         "requires": "GeminiAPIKey",
         "accepts_file_input": false
@@ -11,7 +11,7 @@
       {
         "name": "Web Browser Agent",
         "description": "Agent #2: capable of browsing the web and extracting information",
-        "module_path": "CrewAgents.d2_tavily_search_agent",
+        "module_path": "agents.CrewAgents.d2_tavily_search_agent",
         "class_name": "TavilySearchAgent",
         "requires": ["TavilyAPIKey", "GeminiAPIKey"],
         "accepts_file_input": false
@@ -19,7 +19,7 @@
       {
         "name": "Web Page Fetcher",
         "description": "Agent #3: capable of querying a specific webpage to read its content",
-        "module_path": "CrewAgents.d3_webpage_agent",
+        "module_path": "agents.CrewAgents.d3_webpage_agent",
         "class_name": "WebPageAgent",
         "requires": "GeminiAPIKey",
         "accepts_file_input": false
@@ -27,7 +27,7 @@
       {
         "name": "File Analyser Agent",
         "description": "Agent #4: capable of understanding complex documents,⚠️⚠️ Is very slow on the online version, is better to use locally",
-        "module_path": "CrewAgents.d4_file_agent",
+        "module_path": "agents.CrewAgents.d4_file_agent",
         "class_name": "DocumentAnalysisAgent",
         "requires": "GeminiAPIKey",
         "accepts_file_input": true
@@ -35,7 +35,7 @@
       {
         "name": "Google Documents Agent",
         "description": "Agent #5: Will save the conversation to a new doc on Google Docs,⚠️⚠️  Due to complex credentials management it is currently unasable on the streamlit version and will be replaced by day 1 Calculations Agent",
-        "module_path": "CrewAgents.d1_calculations_agent",
+        "module_path": "agents.CrewAgents.d1_calculations_agent",
         "class_name": "GoogleDocsAgent",
         "requires": "GeminiAPIKey",
         "accepts_file_input": false
@@ -43,7 +43,7 @@
       {
         "name": "Git Repository Analysis Agent",
         "description": "Agent #6: Analyzes the history, structure, and content of a public Git repository.\n\nFirst, provide a Git clone link (e.g., https://github.com/Axaled/LinkedIn-Agents-Challenge.git).\n\nThen, the following actions are available:\n- list_branches_tool\n- list_tags_tool\n- list_commits_tool\n- get_latest_commit_tool\n- get_file_contents_tool\n- get_diff_tool\n- search_files_tool\n- get_tree_tool\n- get_last_diff_tool",
-        "module_path": "CrewAgents.d6_git_analyser_agent",
+        "module_path": "agents.CrewAgents.d6_git_analyser_agent",
         "class_name": "GitRepoAnalysisAgent",
         "requires": "GeminiAPIKey",
         "accepts_file_input": false
@@ -51,7 +51,7 @@
       {
         "name": "Pool Quotation Agent",
         "description": "Agent #7: Introducing Scripted Agents logic, you can now force the agents into predefined steps to retrieve values, \n this is an arbitrary POC with fictional pool quotation",
-        "module_path": "CrewAgents.d7_pool_quotation_agent",
+        "module_path": "agents.CrewAgents.d7_pool_quotation_agent",
         "class_name": "PoolQuotationAgent",
         "requires": "GeminiAPIKey",
         "accepts_file_input": false

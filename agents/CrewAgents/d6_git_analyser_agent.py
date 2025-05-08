@@ -1,5 +1,5 @@
 from Clients.read_only_git_client import ReadOnlyGitClient
-from CrewAgents.crew_agent import CrewAIAgent
+from agents.CrewAgents.crew_agent import CrewAIAgent
 
 import re
 import os

@@ -7,7 +7,7 @@ import json
 
 from tavily import TavilyClient
 from crewai.tools import tool
-from CrewAgents.crew_agent import CrewAIAgent
+from agents.CrewAgents.crew_agent import CrewAIAgent
 
 from typing import List
 

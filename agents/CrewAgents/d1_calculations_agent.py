@@ -4,7 +4,7 @@ import core.sqlite_patch as sqlite_patch
 
 from typing import Callable, List
 from crewai.tools import tool
-from CrewAgents.crew_agent import CrewAIAgent
+from agents.CrewAgents.crew_agent import CrewAIAgent
 
 
 class CalculationAgent(CrewAIAgent):

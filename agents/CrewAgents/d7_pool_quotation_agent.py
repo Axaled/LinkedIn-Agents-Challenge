@@ -1,6 +1,6 @@
 from typing import List
 from crewai.tools import tool
-from CrewAgents.crew_agent import CrewAIAgent
+from agents.CrewAgents.crew_agent import CrewAIAgent
 from core.script_engine.script import Script
 from core.script_engine.step import Step
 from core.script_engine.validator import Range, Regex

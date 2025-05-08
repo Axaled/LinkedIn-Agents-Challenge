@@ -25,6 +25,10 @@ I'll update this list every day:
 | 2   | Web Search Agent   | Browses the web to find relevant information    |
 | 3   | Web Page Fetcher   | Reads the content of any url to answer questions   |
 | 4   | File Analyser   | Is able to read files it receives as input  |
+| 5   | Google docs Agent  | Is able to perform actions on Google docs, like saving a conversation  |
+| 6  | Git Analyser Agent  | Retrieves public git repo to analyze them, will be used in collaboration with other agents  |
+| 7  | Pool Quotation Agent  | Is a demo of the new ScriptedAgent I created, he will estimate the cost of your future swimming pool  |
+| 8  | Custom Agent | Was made without any framework or wrapper, is a demo agent and is not available through the interface  |
 
 
 ## Installation

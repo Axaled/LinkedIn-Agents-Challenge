@@ -5,7 +5,7 @@ import requests
 
 from typing import List
 from crewai.tools import tool
-from CrewAgents.crew_agent import CrewAIAgent
+from agents.CrewAgents.crew_agent import CrewAIAgent
 from bs4 import BeautifulSoup
 from readability import Document
 

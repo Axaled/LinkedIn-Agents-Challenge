@@ -1,6 +1,6 @@
 import core.sqlite_patch as sqlite_patch
 
-from CrewAgents.crew_agent import CrewAIAgent
+from agents.CrewAgents.crew_agent import CrewAIAgent
 
 import os
 import uuid
