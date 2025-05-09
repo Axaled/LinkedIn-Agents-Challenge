@@ -29,6 +29,7 @@ I'll update this list every day:
 | 6  | Git Analyser Agent  | Retrieves public git repo to analyze them, will be used in collaboration with other agents  |
 | 7  | Pool Quotation Agent  | Is a demo of the new ScriptedAgent I created, he will estimate the cost of your future swimming pool  |
 | 8  | Custom Agent | Was made without any framework or wrapper, is a demo agent and is not available through the interface  |
+| 9  | Email Agent | Can't be pushed to prod today, sorry ...|
 
 
 ## Installation
