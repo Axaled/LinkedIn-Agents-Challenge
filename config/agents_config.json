@@ -55,6 +55,22 @@
         "class_name": "PoolQuotationAgent",
         "requires": "GeminiAPIKey",
         "accepts_file_input": false
+      },
+      {
+        "name": "Custom Agent",
+        "description": "Agent #8: Custom  agent is for demo purpose only, your can find the code on Github https://github.com/Axaled/LinkedIn-Agents-Challenge.git \n This will redirect you to agent #8 Pool quotation agent",
+        "module_path": "agents.CrewAgents.d7_pool_quotation_agent",
+        "class_name": "PoolQuotationAgent",
+        "requires": "GeminiAPIKey",
+        "accepts_file_input": false
+      },
+      {
+        "name": "Mail sender Agent",
+        "description": "Agent #9: Can send emails from your own personnal account \n will not work with pro account, I am not responsible for what the LLM sends, use this carefully",
+        "module_path": "agents.CrewAgents.d9_outlook_agent",
+        "class_name": "OutlookAgent",
+        "requires": "GeminiAPIKey, OutlookEmailAddress",
+        "accepts_file_input": false
       }
     ]
   }
