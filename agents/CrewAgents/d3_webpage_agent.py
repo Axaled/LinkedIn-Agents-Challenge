@@ -11,7 +11,7 @@ from readability import Document
 
 
 class WebPageAgent(CrewAIAgent):
-    def __init__(self, model="gemini/gemini-1.5-pro"):
+    def __init__(self, model="gemini/gemini-1.5-flash-002"):
 
         self.role = "Web content analyzer"
         self.goal = "To fetch, parse, and summarize the main content of any webpage provided."

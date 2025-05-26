@@ -67,7 +67,7 @@ class DocumentAnalysisAgent(CrewAIAgent):
             embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
             db = FAISS.from_documents(chunks, embeddings)
 
-            llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash")
+            llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash-002")
 
             step = 6
             qa = RetrievalQA.from_chain_type(

@@ -22,7 +22,7 @@ SCOPES = [
 ]
 
 class GoogleDocsAgent(CrewAIAgent):
-    def __init__(self, model="gemini/gemini-1.5-pro"):
+    def __init__(self, model="gemini/gemini-1.5-flash-002"):
 
         self.session_id = str(uuid.uuid4())
         super().__init__(model)

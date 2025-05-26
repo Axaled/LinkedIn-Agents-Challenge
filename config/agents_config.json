@@ -71,6 +71,14 @@
         "class_name": "OutlookAgent",
         "requires": "GeminiAPIKey, OutlookEmailAddress",
         "accepts_file_input": false
+      },
+      {
+        "name": "Test Agent",
+        "description": "Agent #10: Test",
+        "module_path": "agents.CrewAgents.d10_crew_test",
+        "class_name": "TestCrew",
+        "requires": "GeminiAPIKey",
+        "accepts_file_input": false
       }
     ]
   }

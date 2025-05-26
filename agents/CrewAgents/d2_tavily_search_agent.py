@@ -13,7 +13,7 @@ from typing import List
 
 class TavilySearchAgent(CrewAIAgent):
 
-    def __init__(self, model="gemini/gemini-1.5-pro"):
+    def __init__(self, model="gemini/gemini-1.5-flash-002"):
         super().__init__(model)
         self.tavily_key = os.getenv("TAVILY_API_KEY")
         if not self.tavily_key:

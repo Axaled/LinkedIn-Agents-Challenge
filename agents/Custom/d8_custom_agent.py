@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 from typing import List, Dict, Any, Optional, Tuple
 
 class CustomAgent:
-    def __init__(self, model="gemini-1.5-flash", max_llm_calls=10):
+    def __init__(self, model="gemini-1.5-flash-002", max_llm_calls=10):
         self.model = model
         self.MAX_LLM_CALLS = max_llm_calls
         

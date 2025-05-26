@@ -8,7 +8,7 @@ from agents.CrewAgents.crew_agent import CrewAIAgent
 
 
 class CalculationAgent(CrewAIAgent):
-    def __init__(self, model="gemini/gemini-1.5-pro"):
+    def __init__(self, model="gemini/gemini-1.5-flash-002"):
         super().__init__(model)
 
     def _create_tools(self) -> List:
